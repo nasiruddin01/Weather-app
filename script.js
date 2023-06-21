@@ -2,8 +2,8 @@ const api_key = "f064a082d05edbbddf41d7254c8176ed";
 const base_url = "https://api.openweathermap.org/data/2.5/";
 
 const inputSearchBar = document.getElementById("city");
-inputSearchBar.addEventListener("keypress", fetchWeather);
-function fetchWeather(e) {
+inputSearchBar.addEventListener("keypress", getWeatherData);
+function getWeatherData(e) {
   const city = document.getElementById("city").value;
   if (e.key == "Enter") {
     fetch(`${base_url}weather?q=${city}&units=metric&APPID=${api_key}`)
@@ -12,25 +12,6 @@ function fetchWeather(e) {
       })
       .then(setResults);
   }
-}
-function convertTime(timestamp) {
-  const date = new Date(timestamp * 1000);
-  let hours = date.getHours();
-  const minutes = date.getMinutes().toString().padStart(2, "0");
-  const seconds = date.getSeconds().toString().padStart(2, "0");
-  let period = "AM";
-
-  if (hours > 12) {
-    hours -= 12;
-    period = "PM";
-  } else if (hours === 0) {
-    hours = 12;
-  } else if (hours === 12) {
-    period = "PM";
-  }
-
-  hours = hours.toString().padStart(2, "0");
-  return `${hours}:${minutes}:${seconds} ${period}`;
 }
 
 function setResults(results) {
@@ -61,6 +42,25 @@ function setResults(results) {
   } else {
     const cityName = weatherResult.name;
     const countryName = weatherResult.sys.country;
+    function convertTime(timestamp) {
+      const date = new Date(timestamp * 1000);
+      let hours = date.getHours();
+      const minutes = date.getMinutes().toString().padStart(2, "0");
+      const seconds = date.getSeconds().toString().padStart(2, "0");
+      let period = "AM";
+
+      if (hours > 12) {
+        hours -= 12;
+        period = "PM";
+      } else if (hours === 0) {
+        hours = 12;
+      } else if (hours === 12) {
+        period = "PM";
+      }
+
+      hours = hours.toString().padStart(2, "0");
+      return `${hours}:${minutes}:${seconds} ${period}`;
+    }
     const sunRise = convertTime(weatherResult.sys.sunrise);
     const sunSet = convertTime(weatherResult.sys.sunset);
 
