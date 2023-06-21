@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+
+    .container {
+        min-height: 100vh;
+        width: 100vw;
+
+        .header {
+            margin: auto;
+            text-align: center;
+            padding-top: 6rem;
+            h1 {
+                font-size: 4rem;
+                width: 50%;
+                margin: auto;
+                background: linear-gradient(90deg, #ff0000 0%, #ffc800 22%, #ff117c 50%, #4e1dff 79%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: animatedgradient 3s ease alternate infinite;
+            }
+            input {
+                margin-top: 1rem;
+                border: 2px solid #0000ff;
+                border-radius: 10px;
+                padding: 1rem 2rem;
+                color: rgba(86, 0, 139, 0.66);
+                background: #fff;
+                transition: 0.09s;
+                font-weight: 500;
+                font-size: 1rem;
+                &:hover {
+                    border: 1px solid transparent;
+                    filter: drop-shadow(0px 0px 1px rgba(0, 0, 107, 0.1)) drop-shadow(0px 0px 2px rgba(0, 0, 107, 0.2))
+                        drop-shadow(0px 0px 4px rgba(0, 0, 107, 0.1));
+                }
+                &::placeholder {
+                    color: rgba(176, 49, 255, 0.623) !important;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .output {
+            margin: 2rem auto 0 auto;
+            width: 420px;
+            border: 5px solid;
+            border-image: linear-gradient(90deg, #ff0000 0%, #ffc800 22%, #ff117c 50%, #4e1dff 79%);
+            border-image-slice: 1;
+            border-radius: 10px;
+            animation: animatedgradient 3s ease alternate infinite;
+            padding: 2rem;
+
+            .card {
+                .heading {
+                    .date {
+                        padding: 0;
+                        margin: 5px 0 0 0;
+                        font-size: 16px;
+                    }
+                    h2 {
+                        font-size: 2rem;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+                .temp {
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    grid-gap: 1rem;
+                    margin: 2rem;
+                    .items {
+                        h3 {
+                            margin: 0;
+                            padding: 0;
+                            font-size: 4rem;
+                            font-family: "Roboto", sans-serif;
+                        }
+                        p {
+                            text-transform: capitalize;
+                            padding: 0px;
+                            margin: 0;
+                        }
+                    }
+                    .feels {
+                        padding-top: 2.2rem;
+                    }
+                }
+                .flex {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .sun {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    p {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        span {
+                            font-size: 20px;
+                        }
+                        svg {
+                            // position: absolute;
+                            // top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .error {
+        background-color: #fff;
+    }
+    .hazy {
+        background-image: url("/public/hazy.jpeg");
+        background-size: cover;
+    }
+    .rainy {
+        background-image: url("/public/rainy.webp");
+        background-size: cover;
+        color: #000;
+    }
+    .cold {
+        background-image: url("/public/cold.webp");
+        background-size: cover;
+    }
+    .cloudy {
+        background-image: url("/public/cloudy.jpg");
+        background-size: cover;
+        color: #fff;
+    }
+    .sunny {
+        background-image: url("/public/sunny.jpg");
+        background-size: cover;
+    }
+    .warm {
+        background-image: url("/public/warm.jpeg");
+        background-size: cover;
+    }
+}
