@@ -160,6 +160,12 @@ body .container .output .card .temp .feels {
   padding-top: 2.2rem;
 }
 
+@media screen and (max-width: 375px) {
+  body .container .output .card .temp .feels {
+    padding-top: 1rem;
+  }
+}
+
 body .container .output .card .flex {
   display: -webkit-box;
   display: -ms-flexbox;

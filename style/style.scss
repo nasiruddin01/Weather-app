@@ -106,6 +106,9 @@ body {
                     }
                     .feels {
                         padding-top: 2.2rem;
+                        @media screen and (max-width: 375px) {
+                            padding-top: 1rem;
+                        }
                     }
                 }
                 .flex {
