@@ -30,19 +30,14 @@ function convertTime(timestamp) {
   }
 
   hours = hours.toString().padStart(2, "0");
-
   return `${hours}:${minutes}:${seconds} ${period}`;
 }
 
 function setResults(results) {
   const backGround = document.getElementById("main");
   const weatherDataElement = document.getElementById("weather");
-
   weatherResult = results;
-
-  console.log(weatherResult, "json");
   if (weatherResult.name === undefined) {
-    // If weatherResult.name is undefined, hide the card element and show the error element
     weatherDataElement.classList.remove("card");
     weatherDataElement.classList.add("error");
     const warning = weatherResult.message;
@@ -180,7 +175,6 @@ function setResults(results) {
 function fetchWeatherData() {
   fetch(`${base_url}weather?q=Dhaka&units=metric&APPID=${api_key}`)
     .then((res) => {
-      console.log(res, "Static");
       return res.json();
     })
     .then(setResults);
@@ -188,5 +182,4 @@ function fetchWeatherData() {
 
 fetchWeatherData();
 
-// Call the API every 5 minutes (adjust the interval as needed)
 // setInterval(fetchWeatherData, 5 * 60 * 1000); // 5 minutes in milliseconds
