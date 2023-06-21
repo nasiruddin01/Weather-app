@@ -49,11 +49,13 @@ function setResults(results) {
     const status = weatherResult.cod;
     const html = ` 
     <div class="error">
-        <p>Error code: ${status}</p>
+        <h2> ${status}</h2>
         <p>${warning}</p>
+          <p>Please enter a valid city name.</p>
+
       </div>`;
     weatherDataElement.innerHTML = html;
-    weatherDataElement.classList.remove(
+    backGround.classList.remove(
       "sunny",
       "rainy",
       "warm",

@@ -83,7 +83,7 @@ body {
                     display: grid;
                     grid-template-columns: auto 1fr;
                     grid-gap: 1rem;
-                    margin: 2rem;
+                    margin: 1rem;
                     @media screen and (max-width: 375px) {
                         margin: 0rem;
                     }
@@ -133,10 +133,18 @@ body {
                 }
             }
         }
+        .error {
+            background-color: #fff;
+            text-align: center;
+            margin-top: 3rem;
+            text-transform: capitalize;
+            h2 {
+                color: #ff0000;
+                font-size: 30px;
+            }
+        }
     }
-    .error {
-        background-color: #fff;
-    }
+
     .hazy {
         background-image: url("/public/hazy.jpeg");
         background-size: cover;

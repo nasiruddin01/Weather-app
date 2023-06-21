@@ -128,7 +128,7 @@ body .container .output .card .temp {
   -ms-grid-columns: auto 1fr;
       grid-template-columns: auto 1fr;
   grid-gap: 1rem;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 @media screen and (max-width: 375px) {
@@ -201,8 +201,16 @@ body .container .output .card .sun p span {
   font-size: 20px;
 }
 
-body .error {
+body .container .error {
   background-color: #fff;
+  text-align: center;
+  margin-top: 3rem;
+  text-transform: capitalize;
+}
+
+body .container .error h2 {
+  color: #ff0000;
+  font-size: 30px;
 }
 
 body .hazy {
