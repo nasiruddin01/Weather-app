@@ -18,8 +18,8 @@ body {
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 animation: animatedgradient 3s ease alternate infinite;
-                @media screen and (max-width: 375px) {
-                    width: 75%;
+                @media screen and (max-width: 420px) {
+                    width: 90%;
                     font-size: 3rem;
                 }
             }
@@ -46,9 +46,13 @@ body {
         }
         .output {
             margin: 1rem auto 0 auto;
+            max-width: 420px;
+            width: 95%;
+            @media screen and (max-width: 375px) {
+                width: 90%;
+            }
 
             .card {
-                max-width: 420px;
                 margin: 0 auto;
                 border: 5px solid;
                 border-image: linear-gradient(90deg, #ff0000 0%, #ffc800 22%, #ff117c 50%, #4e1dff 79%);
@@ -57,8 +61,9 @@ body {
                 animation: animatedgradient 3s ease alternate infinite;
                 padding: 1rem;
                 @media screen and (max-width: 375px) {
-                    width: 95%;
+                    margin: 0 1rem;
                 }
+
                 .heading {
                     .date {
                         padding: 0;
@@ -66,9 +71,12 @@ body {
                         font-size: 16px;
                     }
                     h2 {
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                         padding: 0;
                         margin: 0;
+                        @media screen and (max-width: 375px) {
+                            font-size: 1rem;
+                        }
                     }
                 }
                 .temp {
@@ -76,12 +84,19 @@ body {
                     grid-template-columns: auto 1fr;
                     grid-gap: 1rem;
                     margin: 2rem;
+                    @media screen and (max-width: 375px) {
+                        margin: 0rem;
+                    }
                     .items {
                         h3 {
                             margin: 0;
                             padding: 0;
                             font-size: 4rem;
+
                             font-family: "Roboto", sans-serif;
+                            @media screen and (max-width: 375px) {
+                                font-size: 2rem;
+                            }
                         }
                         p {
                             text-transform: capitalize;

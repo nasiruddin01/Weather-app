@@ -27,9 +27,9 @@ body .container .header h1 {
           animation: animatedgradient 3s ease alternate infinite;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   body .container .header h1 {
-    width: 75%;
+    width: 90%;
     font-size: 3rem;
   }
 }
@@ -75,10 +75,17 @@ body .container .header input::placeholder {
 
 body .container .output {
   margin: 1rem auto 0 auto;
+  max-width: 420px;
+  width: 95%;
+}
+
+@media screen and (max-width: 375px) {
+  body .container .output {
+    width: 90%;
+  }
 }
 
 body .container .output .card {
-  max-width: 420px;
   margin: 0 auto;
   border: 5px solid;
   -o-border-image: linear-gradient(90deg, #ff0000 0%, #ffc800 22%, #ff117c 50%, #4e1dff 79%);
@@ -93,7 +100,7 @@ body .container .output .card {
 
 @media screen and (max-width: 375px) {
   body .container .output .card {
-    width: 95%;
+    margin: 0 1rem;
   }
 }
 
@@ -104,9 +111,15 @@ body .container .output .card .heading .date {
 }
 
 body .container .output .card .heading h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0;
   margin: 0;
+}
+
+@media screen and (max-width: 375px) {
+  body .container .output .card .heading h2 {
+    font-size: 1rem;
+  }
 }
 
 body .container .output .card .temp {
@@ -118,11 +131,23 @@ body .container .output .card .temp {
   margin: 2rem;
 }
 
+@media screen and (max-width: 375px) {
+  body .container .output .card .temp {
+    margin: 0rem;
+  }
+}
+
 body .container .output .card .temp .items h3 {
   margin: 0;
   padding: 0;
   font-size: 4rem;
   font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 375px) {
+  body .container .output .card .temp .items h3 {
+    font-size: 2rem;
+  }
 }
 
 body .container .output .card .temp .items p {
